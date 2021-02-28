@@ -1,0 +1,42 @@
+body {
+  position: relative;
+  margin: 0 auto; }
+
+header {
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  padding: 0 15% 0 15%; }
+  header h1 img {
+    height: 50px; }
+
+nav {
+  width: 70%; }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    nav ul li {
+      height: 25px; }
+
+main {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr;
+  grid-template-areas: 1; }
+  main section {
+    margin-top: 100px;
+    height: 1000px;
+    background-color: #444444; }
+
+/*# sourceMappingURL=main.css.map */

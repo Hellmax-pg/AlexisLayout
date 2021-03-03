@@ -1,24 +1,47 @@
+$bc-white-color: #fff;
+$bc-grey-color: rgb(68, 68, 68);
+$primary-font-family: "LibreBaskerville";
+$primary-layout-padding: 0 20% 0 20%;
+%button-options {
+    font-size: 16px;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    color: $bc-white-color;
+    border: 1px solid rgb(252, 95, 69);
+    background-color: rgb(252, 95, 69);
+    border-radius: 25px;
+    width: 150px;   
+    height: 44px;
+    outline: none;
+    &:hover {
+        background-color: rgb(248, 143, 124);
+        cursor: pointer;
+    }
+};
+
 body {
     position: relative;
     margin: 0 auto;
 }
 
 header {
-    background-color: #fff;
+    width: 100%;
     position: fixed;
+    z-index: 9999;
     top: 0px;
     left: 0px;
+}
+
+.header-block {
+    max-width: 1920px;
+    height: 75px;
+    margin: 0 auto;
+    padding: 0 5% 0 5%;
+    background-color: $bc-white-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    box-sizing: border-box;
-    height: 100px;
-    width: 100%;
-    padding: 0 15% 0 15%;
-    h1 img {
-        height: 50px;
-    }
 }
 
 nav {
@@ -28,22 +51,136 @@ nav {
         list-style-type: none;
         justify-content: space-around;
         flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
         li {
+            padding-left: 5px;
             height: 25px;
+            a {
+                text-decoration: none;
+                color: #000;
+            }
         }
     }
 }
 
 main {
+    max-width: 1920px;
+    margin-top: 75px;
     margin: 0 auto;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 2fr;
-    grid-template-areas: 1;
-    section {
+    grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr 2fr;
+    grid-template-areas:
+    'grey-left home home home home grey-right'
+    'white-left about-us-img about-us-img about-us-comment about-us-comment white-right'
+    ;
+    .grey-left {
+        grid-area: grey-left;
+        background-color: $bc-grey-color;
+    }
+    .grey-right {
+        grid-area: grey-right;
+        background-color: $bc-grey-color;
+    }
+    .white-left {
+        grid-area: white-left;
+        background-color: $bc-white-color;
+    }
+    .white-right {
+        grid-area: white-right;
+        background-color: $bc-white-color;
+    }
+    .home {
+        grid-area: home;
+        height: 775px;
+        background-color: $bc-grey-color;
+        h2 {
+            margin-top: 200px;
+            font-size: 60px;
+            font-family: $primary-font-family;
+            color: $bc-white-color;
+            text-align: center;
+        }
+        .center {
+            width: 100%;
+            text-align: center;
+            .pr-button {
+                @extend %button-options;
+            }
+        }
+        .about-icons {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            .icons {
+                font-family: "Poppins";
+                text-align: center;
+                width: 250px;
+                height: 150px;
+                text-transform: uppercase;
+                &:first-child() {
+                    color: rgb(56, 198, 149);
+                }
+                &:nth-child(2) {
+                    color: rgb(178, 124, 245);
+                }
+                &:last-child() {
+                    color: rgb(254, 185, 96);
+                }
+            }
+        }
+    }
+    .about-us-img {
+        grid-area: about-us-img;
+        box-sizing: border-box;
         margin-top: 100px;
-        height: 1000px;
-        background-color: rgb(68, 68, 68);
+        height: 600px;
+        width: 500px;
+        background: url("/img/about-us-bc.png");
+        border: 8px solid rgb(177, 141, 141);
+    }
+    .about-us-comment {
+        grid-area: about-us-comment;
+        position: relative;
+        left: -100px;
+        margin-top: 100px;
+        padding: 75px 0 75px 0;
+        width: 600px;
+        height: 438px;
+        .comment {
+            background-color: $bc-white-color;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+            border-top: 1px solid #dedede;
+            border-left: 1px solid #dedede;
+            border-right: 1px solid #dedede;
+            padding: 50px;
+            height: 360px;
+            h2 {   
+                font-size: 3rem;
+            }
+        }
+        .line-box {
+            display: flex;
+            background-color: $bc-white-color;
+            width: 600px;
+            .line {
+                width: 25%;
+                &:nth-child(1) {
+                    border-left: 1px solid #dedede;
+                    border-bottom: 3px solid rgb(252, 95, 69);
+                }
+                &:nth-child(2) {
+                    border-bottom: 3px solid rgb(56, 198, 149);
+                }
+                &:nth-child(3) {
+                    border-bottom: 3px solid rgb(178, 124, 245);
+                }
+                &:nth-child(4) {
+                    border-right: 1px solid #dedede;
+                    border-bottom: 3px solid rgb(254, 185, 96);
+                }
+            }    
+        }
     }
 }
-

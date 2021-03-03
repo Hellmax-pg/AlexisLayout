@@ -1,22 +1,39 @@
+main .home .center .pr-button {
+  font-size: 16px;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fc5f45;
+  background-color: #fc5f45;
+  border-radius: 25px;
+  width: 150px;
+  height: 44px;
+  outline: none; }
+  main .home .center .pr-button:hover {
+    background-color: #f88f7c;
+    cursor: pointer; }
+
 body {
   position: relative;
   margin: 0 auto; }
 
 header {
-  background-color: #fff;
+  width: 100%;
   position: fixed;
+  z-index: 9999;
   top: 0px;
-  left: 0px;
+  left: 0px; }
+
+.header-block {
+  max-width: 1920px;
+  height: 75px;
+  margin: 0 auto;
+  padding: 0 5% 0 5%;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  height: 100px;
-  width: 100%;
-  padding: 0 15% 0 15%; }
-  header h1 img {
-    height: 50px; }
+  flex-wrap: wrap; }
 
 nav {
   width: 70%; }
@@ -24,19 +41,106 @@ nav {
     display: flex;
     list-style-type: none;
     justify-content: space-around;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0; }
     nav ul li {
+      padding-left: 5px;
       height: 25px; }
+      nav ul li a {
+        text-decoration: none;
+        color: #000; }
 
 main {
+  max-width: 1920px;
+  margin-top: 75px;
   margin: 0 auto;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 2fr;
-  grid-template-areas: 1; }
-  main section {
-    margin-top: 100px;
-    height: 1000px;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr 2fr;
+  grid-template-areas: 'grey-left home home home home grey-right' 'white-left about-us-img about-us-img about-us-comment about-us-comment white-right'; }
+  main .grey-left {
+    grid-area: grey-left;
     background-color: #444444; }
+  main .grey-right {
+    grid-area: grey-right;
+    background-color: #444444; }
+  main .white-left {
+    grid-area: white-left;
+    background-color: #fff; }
+  main .white-right {
+    grid-area: white-right;
+    background-color: #fff; }
+  main .home {
+    grid-area: home;
+    height: 775px;
+    background-color: #444444; }
+    main .home h2 {
+      margin-top: 200px;
+      font-size: 60px;
+      font-family: "LibreBaskerville";
+      color: #fff;
+      text-align: center; }
+    main .home .center {
+      width: 100%;
+      text-align: center; }
+    main .home .about-icons {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center; }
+      main .home .about-icons .icons {
+        font-family: "Poppins";
+        text-align: center;
+        width: 250px;
+        height: 150px;
+        text-transform: uppercase; }
+        main .home .about-icons .icons:first-child {
+          color: #38c695; }
+        main .home .about-icons .icons:nth-child(2) {
+          color: #b27cf5; }
+        main .home .about-icons .icons:last-child {
+          color: #feb960; }
+  main .about-us-img {
+    grid-area: about-us-img;
+    box-sizing: border-box;
+    margin-top: 100px;
+    height: 600px;
+    width: 500px;
+    background: url("/img/about-us-bc.png");
+    border: 8px solid #b18d8d; }
+  main .about-us-comment {
+    grid-area: about-us-comment;
+    position: relative;
+    left: -100px;
+    margin-top: 100px;
+    padding: 75px 0 75px 0;
+    width: 600px;
+    height: 438px; }
+    main .about-us-comment .comment {
+      background-color: #fff;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+      border-top: 1px solid #dedede;
+      border-left: 1px solid #dedede;
+      border-right: 1px solid #dedede;
+      padding: 50px;
+      height: 360px; }
+      main .about-us-comment .comment h2 {
+        font-size: 3rem; }
+    main .about-us-comment .line-box {
+      display: flex;
+      background-color: #fff;
+      width: 600px; }
+      main .about-us-comment .line-box .line {
+        width: 25%; }
+        main .about-us-comment .line-box .line:nth-child(1) {
+          border-left: 1px solid #dedede;
+          border-bottom: 3px solid #fc5f45; }
+        main .about-us-comment .line-box .line:nth-child(2) {
+          border-bottom: 3px solid #38c695; }
+        main .about-us-comment .line-box .line:nth-child(3) {
+          border-bottom: 3px solid #b27cf5; }
+        main .about-us-comment .line-box .line:nth-child(4) {
+          border-right: 1px solid #dedede;
+          border-bottom: 3px solid #feb960; }
 
 /*# sourceMappingURL=main.css.map */

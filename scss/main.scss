@@ -1,10 +1,16 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf");
+    font-style: normal;
+    font-size: normal;
+}
 $bc-white-color: #fff;
-$bc-grey-color: rgb(68, 68, 68);
-$primary-font-family: "LibreBaskerville";
+$bc-black-color: rgb(68, 68, 68);
+$bc-grey-color: rgb(247, 247, 247);
+$primary-font-family: "Poppins";
 $primary-layout-padding: 0 20% 0 20%;
 %button-options {
     font-size: 16px;
-    font-family: "Poppins";
     text-transform: uppercase;
     color: $bc-white-color;
     border: 1px solid rgb(252, 95, 69);
@@ -17,11 +23,12 @@ $primary-layout-padding: 0 20% 0 20%;
         background-color: rgb(248, 143, 124);
         cursor: pointer;
     }
-};
+}
 
 body {
     position: relative;
     margin: 0 auto;
+    font-family: $primary-font-family;
 }
 
 header {
@@ -30,39 +37,44 @@ header {
     z-index: 9999;
     top: 0px;
     left: 0px;
-}
-
-.header-block {
-    max-width: 1920px;
-    height: 75px;
-    margin: 0 auto;
-    padding: 0 5% 0 5%;
-    background-color: $bc-white-color;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-nav {
-    width: 70%;
-    ul {
+    .header-block {
+        max-width: 1920px;
+        height: 75px;
+        margin: 0 auto;
+        padding: 0 5% 0 5%;
+        background-color: $bc-white-color;
         display: flex;
-        list-style-type: none;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
-        li {
-            padding-left: 5px;
-            height: 25px;
-            a {
-                text-decoration: none;
-                color: #000;
+        h1 {
+            margin-left: 5%;
+        }
+        nav {
+            width: 70%;
+            ul {
+                display: flex;
+                list-style-type: none;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                padding: 0;
+                margin: 0;
+                li {
+                    padding-left: 10px;
+                    height: 25px;
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
             }
         }
     }
 }
+
+
+
+
 
 main {
     max-width: 1920px;
@@ -72,16 +84,17 @@ main {
     grid-template-rows: auto;
     grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr 2fr;
     grid-template-areas:
-    'grey-left home home home home grey-right'
+    'black-left home home home home black-right'
     'white-left about-us-img about-us-img about-us-comment about-us-comment white-right'
+    'grey-left our-focus our-focus our-focus our-focus grey-right'
     ;
-    .grey-left {
-        grid-area: grey-left;
-        background-color: $bc-grey-color;
+    .black-left {
+        grid-area: black-left;
+        background-color: $bc-black-color;
     }
-    .grey-right {
-        grid-area: grey-right;
-        background-color: $bc-grey-color;
+    .black-right {
+        grid-area: black-right;
+        background-color: $bc-black-color;
     }
     .white-left {
         grid-area: white-left;
@@ -91,14 +104,21 @@ main {
         grid-area: white-right;
         background-color: $bc-white-color;
     }
+    .grey-left {
+        grid-area: grey-left;
+        background-color: $bc-grey-color;
+    }
+    .grey-right {
+        grid-area: grey-right;
+        background-color: $bc-grey-color;
+    }
     .home {
         grid-area: home;
         height: 775px;
-        background-color: $bc-grey-color;
+        background-color: $bc-black-color;
         h2 {
             margin-top: 200px;
             font-size: 60px;
-            font-family: $primary-font-family;
             color: $bc-white-color;
             text-align: center;
         }
@@ -114,7 +134,6 @@ main {
             display: flex;
             justify-content: center;
             .icons {
-                font-family: "Poppins";
                 text-align: center;
                 width: 250px;
                 height: 150px;
@@ -137,7 +156,8 @@ main {
         margin-top: 100px;
         height: 600px;
         width: 500px;
-        background: url("/img/about-us-bc.png");
+        margin-bottom: 100px;
+        background: url("/img/about-us/about-us-bc.png");
         border: 8px solid rgb(177, 141, 141);
     }
     .about-us-comment {
@@ -181,6 +201,40 @@ main {
                     border-bottom: 3px solid rgb(254, 185, 96);
                 }
             }    
+        }
+    }
+    .our-focus {
+        grid-area: our-focus;
+        text-align: center;
+        background-color: $bc-grey-color;
+        padding-top: 50px;
+        .focus-item-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            .focus-item {
+                text-align: center;
+                background-color: $bc-white-color;
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+                width: 20%;
+                color: rgb(49, 49, 49);
+                &:nth-child(1) {
+                    border-bottom: 3px solid rgb(252, 95, 69);
+                }
+                &:nth-child(2) {
+                    border-bottom: 3px solid rgb(56, 198, 149);
+                }
+                &:nth-child(3) {
+                    border-bottom: 3px solid rgb(178, 124, 245);
+                }
+                &:nth-child(4) {
+                    border-bottom: 3px solid rgb(254, 185, 96);
+                }
+            }
+        }
+        h2 {   
+            font-size: 3rem;
         }
     }
 }

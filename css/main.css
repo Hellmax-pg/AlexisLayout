@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf");
+  font-style: normal;
+  font-size: normal; }
+
 main .home .center .pr-button {
   font-size: 16px;
-  font-family: "Poppins";
   text-transform: uppercase;
   color: #fff;
   border: 1px solid #fc5f45;
@@ -15,7 +20,8 @@ main .home .center .pr-button {
 
 body {
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "Poppins"; }
 
 header {
   width: 100%;
@@ -23,33 +29,33 @@ header {
   z-index: 9999;
   top: 0px;
   left: 0px; }
-
-.header-block {
-  max-width: 1920px;
-  height: 75px;
-  margin: 0 auto;
-  padding: 0 5% 0 5%;
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; }
-
-nav {
-  width: 70%; }
-  nav ul {
+  header .header-block {
+    max-width: 1920px;
+    height: 75px;
+    margin: 0 auto;
+    padding: 0 5% 0 5%;
+    background-color: #fff;
     display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0; }
-    nav ul li {
-      padding-left: 5px;
-      height: 25px; }
-      nav ul li a {
-        text-decoration: none;
-        color: #000; }
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+    header .header-block h1 {
+      margin-left: 5%; }
+    header .header-block nav {
+      width: 70%; }
+      header .header-block nav ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0; }
+        header .header-block nav ul li {
+          padding-left: 10px;
+          height: 25px; }
+          header .header-block nav ul li a {
+            text-decoration: none;
+            color: #000; }
 
 main {
   max-width: 1920px;
@@ -58,12 +64,12 @@ main {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr 2fr;
-  grid-template-areas: 'grey-left home home home home grey-right' 'white-left about-us-img about-us-img about-us-comment about-us-comment white-right'; }
-  main .grey-left {
-    grid-area: grey-left;
+  grid-template-areas: 'black-left home home home home black-right' 'white-left about-us-img about-us-img about-us-comment about-us-comment white-right' 'grey-left our-focus our-focus our-focus our-focus grey-right'; }
+  main .black-left {
+    grid-area: black-left;
     background-color: #444444; }
-  main .grey-right {
-    grid-area: grey-right;
+  main .black-right {
+    grid-area: black-right;
     background-color: #444444; }
   main .white-left {
     grid-area: white-left;
@@ -71,6 +77,12 @@ main {
   main .white-right {
     grid-area: white-right;
     background-color: #fff; }
+  main .grey-left {
+    grid-area: grey-left;
+    background-color: #f7f7f7; }
+  main .grey-right {
+    grid-area: grey-right;
+    background-color: #f7f7f7; }
   main .home {
     grid-area: home;
     height: 775px;
@@ -78,7 +90,6 @@ main {
     main .home h2 {
       margin-top: 200px;
       font-size: 60px;
-      font-family: "LibreBaskerville";
       color: #fff;
       text-align: center; }
     main .home .center {
@@ -89,7 +100,6 @@ main {
       display: flex;
       justify-content: center; }
       main .home .about-icons .icons {
-        font-family: "Poppins";
         text-align: center;
         width: 250px;
         height: 150px;
@@ -106,7 +116,8 @@ main {
     margin-top: 100px;
     height: 600px;
     width: 500px;
-    background: url("/img/about-us-bc.png");
+    margin-bottom: 100px;
+    background: url("/img/about-us/about-us-bc.png");
     border: 8px solid #b18d8d; }
   main .about-us-comment {
     grid-area: about-us-comment;
@@ -142,5 +153,31 @@ main {
         main .about-us-comment .line-box .line:nth-child(4) {
           border-right: 1px solid #dedede;
           border-bottom: 3px solid #feb960; }
+  main .our-focus {
+    grid-area: our-focus;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding-top: 50px; }
+    main .our-focus .focus-item-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; }
+      main .our-focus .focus-item-list .focus-item {
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+        width: 20%;
+        color: #313131; }
+        main .our-focus .focus-item-list .focus-item:nth-child(1) {
+          border-bottom: 3px solid #fc5f45; }
+        main .our-focus .focus-item-list .focus-item:nth-child(2) {
+          border-bottom: 3px solid #38c695; }
+        main .our-focus .focus-item-list .focus-item:nth-child(3) {
+          border-bottom: 3px solid #b27cf5; }
+        main .our-focus .focus-item-list .focus-item:nth-child(4) {
+          border-bottom: 3px solid #feb960; }
+    main .our-focus h2 {
+      font-size: 3rem; }
 
 /*# sourceMappingURL=main.css.map */

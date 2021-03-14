@@ -178,7 +178,7 @@ main {
         box-sizing: border-box;
         margin: 150px 0;
         .about-us-img-area {
-            background: url("/img/about-us/about-us-bc.png");
+            background: url("../img/about-us/about-us-bc.png");
             float: right;
             height: 700px;
             width: 555px;
@@ -856,6 +856,7 @@ main {
                 font-size: 0;
                 width: 555px;
                 height: 700px;
+                margin-bottom: 15px;
                 img {
                     width: 100%;
                 }
@@ -866,11 +867,14 @@ main {
                     border-bottom: 3px solid rgb(252, 95, 69);
                     h3 {
                         text-align: left;
-                        font-size: 1.3rem;
+                        font-size: 1.1rem;
                     }
                     p {
                         text-align: left;
-                        font-size: 1rem;
+                        font-size: 0.9rem;
+                    }
+                    b {
+                        color: rgb(252, 95, 69);
                     }
                 }
             }
@@ -973,7 +977,7 @@ main {
     .contact {
         grid-area: contact;
         background-color: rgb(207, 207, 207);
-        padding: 0 15%;
+        padding: 100px 15%;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -1017,13 +1021,13 @@ main {
             }
         }
         footer {
-            margin: 150px 25%;
-            height: 230px;
-            width: 1200px;
-            background-color: $bc-black-color;
             display: flex;
             justify-content: space-between;
-            align-items: center; 
+            align-items: center;
+            height: 230px;
+            width: 1200px;
+            margin-top: 150px;
+            background-color: $bc-black-color;
             h1 {
                 width: 25%;
                 img {

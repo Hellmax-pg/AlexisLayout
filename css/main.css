@@ -127,7 +127,7 @@ main {
     box-sizing: border-box;
     margin: 150px 0; }
     main .about-us-img .about-us-img-area {
-      background: url("/img/about-us/about-us-bc.png");
+      background: url("../img/about-us/about-us-bc.png");
       float: right;
       height: 700px;
       width: 555px;
@@ -616,7 +616,8 @@ main {
       main .our-blog .our-blog-item-block .our-blog-item-main {
         font-size: 0;
         width: 555px;
-        height: 700px; }
+        height: 700px;
+        margin-bottom: 15px; }
         main .our-blog .our-blog-item-block .our-blog-item-main img {
           width: 100%; }
         main .our-blog .our-blog-item-block .our-blog-item-main .our-blog-item-main-text {
@@ -626,10 +627,12 @@ main {
           border-bottom: 3px solid #fc5f45; }
           main .our-blog .our-blog-item-block .our-blog-item-main .our-blog-item-main-text h3 {
             text-align: left;
-            font-size: 1.3rem; }
+            font-size: 1.1rem; }
           main .our-blog .our-blog-item-block .our-blog-item-main .our-blog-item-main-text p {
             text-align: left;
-            font-size: 1rem; }
+            font-size: 0.9rem; }
+          main .our-blog .our-blog-item-block .our-blog-item-main .our-blog-item-main-text b {
+            color: #fc5f45; }
       main .our-blog .our-blog-item-block .our-blog-item-secondary {
         width: 555px;
         height: 700px;
@@ -701,7 +704,7 @@ main {
   main .contact {
     grid-area: contact;
     background-color: #cfcfcf;
-    padding: 0 15%;
+    padding: 100px 15%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -737,13 +740,13 @@ main {
         margin: 0 auto;
         margin-top: 50px; }
     main .contact footer {
-      margin: 150px 25%;
-      height: 230px;
-      width: 1200px;
-      background-color: #444444;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      height: 230px;
+      width: 1200px;
+      margin-top: 150px;
+      background-color: #444444; }
       main .contact footer h1 {
         width: 25%; }
         main .contact footer h1 img {

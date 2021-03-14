@@ -3,7 +3,3 @@ $('.click-video-button').click(function() {
     $('div.youtube').css('display', 'block');
     $('iframe.youtube').prop('src', 'https://www.youtube.com/embed/ZOzzRlc_qho?rel=0&amp;modestbranding=1&amp;controls=2&amp;showinfo=0&amp;fs=1&amp;wmode=opaque&amp;autoplay=1&amp;enablejsapi=1&amp;');
 });
-
-// $('.portfolio-img-block').hover(function() {
-//     $('.portfolio-img-block-text').html('Project One')
-// });

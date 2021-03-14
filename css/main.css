@@ -4,7 +4,7 @@
   font-style: normal;
   font-size: normal; }
 
-main .home .center .pr-button, main .pricing .pricing-table-block .pricing-table-item .pr-button, main .select-us h3 .pr-button, main .subscribe form .pr-button {
+main .home .center .pr-button, main .pricing .pricing-table-block .pricing-table-item .pr-button, main .select-us h3 .pr-button, main .subscribe form .pr-button, main .contact .contact-form .pr-button {
   font-family: "Poppins";
   font-size: 16px;
   color: #fff;
@@ -14,7 +14,7 @@ main .home .center .pr-button, main .pricing .pricing-table-block .pricing-table
   width: 150px;
   height: 44px;
   outline: none; }
-  main .home .center .pr-button:hover, main .pricing .pricing-table-block .pricing-table-item .pr-button:hover, main .select-us h3 .pr-button:hover, main .subscribe form .pr-button:hover {
+  main .home .center .pr-button:hover, main .pricing .pricing-table-block .pricing-table-item .pr-button:hover, main .select-us h3 .pr-button:hover, main .subscribe form .pr-button:hover, main .contact .contact-form .pr-button:hover {
     background-color: #f88f7c;
     cursor: pointer; }
 
@@ -89,7 +89,7 @@ main {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr 2fr;
-  grid-template-areas: 'home home home home home home' 'about-us-img about-us-img about-us-img about-us-comment about-us-comment about-us-comment' 'our-focus our-focus our-focus our-focus our-focus our-focus' 'our-awesomes our-awesomes our-awesomes our-awesomes our-awesomes our-awesomes' 'portfolio portfolio portfolio portfolio portfolio portfolio' 'our-team our-team our-team our-team our-team our-team' 'stats stats stats stats stats stats' 'work-steps work-steps work-steps work-steps work-steps work-steps' 'pricing pricing pricing pricing pricing pricing' 'testimonials testimonials testimonials testimonials testimonials testimonials' 'select-us select-us select-us select-us select-us select-us' 'our-blog our-blog our-blog our-blog our-blog our-blog' 'subscribe subscribe subscribe subscribe subscribe subscribe'; }
+  grid-template-areas: 'home home home home home home' 'about-us-img about-us-img about-us-img about-us-comment about-us-comment about-us-comment' 'our-focus our-focus our-focus our-focus our-focus our-focus' 'our-awesomes our-awesomes our-awesomes our-awesomes our-awesomes our-awesomes' 'portfolio portfolio portfolio portfolio portfolio portfolio' 'our-team our-team our-team our-team our-team our-team' 'stats stats stats stats stats stats' 'work-steps work-steps work-steps work-steps work-steps work-steps' 'pricing pricing pricing pricing pricing pricing' 'testimonials testimonials testimonials testimonials testimonials testimonials' 'select-us select-us select-us select-us select-us select-us' 'our-blog our-blog our-blog our-blog our-blog our-blog' 'subscribe subscribe subscribe subscribe subscribe subscribe' 'contact contact contact contact contact contact'; }
   main .home {
     grid-area: home;
     background-color: #444444;
@@ -698,5 +698,92 @@ main {
     main .subscribe form .pr-button {
       border-radius: 0 20px 20px 0;
       width: 200px; }
+  main .contact {
+    grid-area: contact;
+    background-color: #cfcfcf;
+    padding: 0 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    main .contact .contact-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 750px; }
+      main .contact .contact-form .contact-form-input-block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 200px; }
+        main .contact .contact-form .contact-form-input-block .contact-form-input {
+          font-family: "Poppins";
+          border: solid 0.3px #dedede;
+          text-align: center;
+          height: 50px;
+          width: 45%; }
+          main .contact .contact-form .contact-form-input-block .contact-form-input:focus {
+            outline: none; }
+      main .contact .contact-form textarea {
+        padding: 20px;
+        font-family: "Poppins";
+        border: solid 0.3px #dedede;
+        text-align: center; }
+        main .contact .contact-form textarea:focus {
+          outline: none; }
+      main .contact .contact-form .pr-button {
+        margin: 0 auto;
+        margin-top: 50px; }
+    main .contact footer {
+      margin: 150px 25%;
+      height: 230px;
+      width: 1200px;
+      background-color: #444444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      main .contact footer h1 {
+        width: 25%; }
+        main .contact footer h1 img {
+          width: 150px; }
+      main .contact footer .footer-contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        box-sizing: border-box;
+        width: 25%;
+        padding: 50px;
+        height: inherit;
+        text-align: left; }
+        main .contact footer .footer-contacts p {
+          margin-top: 0;
+          color: #fff;
+          font-size: 1rem; }
+        main .contact footer .footer-contacts span img {
+          margin-right: 20px; }
+        main .contact footer .footer-contacts:nth-child(1) {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 3px solid #fc5f45; }
+          main .contact footer .footer-contacts:nth-child(1) h1 {
+            width: 150px;
+            height: 50px;
+            background: url("../img/contact/Alexis.png") no-repeat; }
+        main .contact footer .footer-contacts:nth-child(2) {
+          border-bottom: 3px solid #38c695; }
+          main .contact footer .footer-contacts:nth-child(2) h3 {
+            color: #38c695; }
+        main .contact footer .footer-contacts:nth-child(3) {
+          border-bottom: 3px solid #b27cf5; }
+          main .contact footer .footer-contacts:nth-child(3) h3 {
+            color: #b27cf5; }
+        main .contact footer .footer-contacts:nth-child(4) {
+          border-bottom: 3px solid #feb960; }
+          main .contact footer .footer-contacts:nth-child(4) h3 {
+            color: #feb960; }
 
 /*# sourceMappingURL=main.css.map */

@@ -127,6 +127,7 @@ main {
     'select-us select-us select-us select-us select-us select-us'
     'our-blog our-blog our-blog our-blog our-blog our-blog'
     'subscribe subscribe subscribe subscribe subscribe subscribe'
+    'contact contact contact contact contact contact'
     ;
     .home {
         grid-area: home;
@@ -966,6 +967,118 @@ main {
                 @extend %button-options;
                 border-radius: 0 20px 20px 0;
                 width: 200px;
+            }
+        }
+    }
+    .contact {
+        grid-area: contact;
+        background-color: rgb(207, 207, 207);
+        padding: 0 15%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; 
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 750px;
+            .contact-form-input-block {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center; 
+                height: 200px;
+                .contact-form-input {
+                    font-family: $primary-font-family;
+                    border: solid 0.3px #dedede;
+                    text-align: center;
+                    height: 50px;
+                    width: 45%;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            textarea {
+                padding: 20px;
+                font-family: $primary-font-family;
+                border: solid 0.3px #dedede;
+                text-align: center;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .pr-button {
+                @extend %button-options;
+                margin: 0 auto;
+                margin-top: 50px;
+            }
+        }
+        footer {
+            margin: 150px 25%;
+            height: 230px;
+            width: 1200px;
+            background-color: $bc-black-color;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            h1 {
+                width: 25%;
+                img {
+                    width: 150px;
+                }
+            }
+            .footer-contacts {
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                box-sizing: border-box;
+                width: 25%;
+                padding: 50px;
+                height: inherit;
+                text-align: left;
+                p {
+                    margin-top: 0;
+                    color: #fff;
+                    font-size: 1rem;
+                }
+                span {
+                    img {
+                        margin-right: 20px;
+                    }
+                }
+                &:nth-child(1) {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 3px solid rgb(252, 95, 69);
+                    h1 {
+                        width: 150px;
+                        height: 50px;
+                        background: url("../img/contact/Alexis.png") no-repeat;
+                    }
+                }
+                &:nth-child(2) {
+                    border-bottom: 3px solid rgb(56, 198, 149);
+                    h3 {
+                        color: rgb(56, 198, 149);
+                    }
+                }
+                &:nth-child(3) {
+                    border-bottom: 3px solid rgb(178, 124, 245);
+                    h3 {
+                        color: rgb(178, 124, 245);
+                    }
+                }
+                &:nth-child(4) {
+                    border-bottom: 3px solid rgb(254, 185, 96);
+                    h3 {
+                        color: rgb(254, 185, 96);
+                    }
+                }
             }
         }
     }

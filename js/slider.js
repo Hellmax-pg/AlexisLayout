@@ -2,11 +2,11 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlide() {
-    showSlides(slideIndex += 1);
+    showSlides(slideIndex + 1);
 }
 
 function minusSlide() {
-    showSlides(slideIndex -= 1);  
+    showSlides(slideIndex - 1);  
 }
 
 function currentSlide(n) {

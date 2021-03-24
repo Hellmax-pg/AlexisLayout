@@ -56,7 +56,7 @@ header {
   left: 0px; }
   header .header-block {
     max-width: 1920px;
-    height: 75px;
+    max-height: 75px;
     margin: 0 auto;
     padding: 0 5% 0 5%;
     background-color: #fff;
@@ -89,13 +89,13 @@ main {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr 2fr;
-  grid-template-areas: 'home home home home home home' 'about-us-img about-us-img about-us-img about-us-comment about-us-comment about-us-comment' 'our-focus our-focus our-focus our-focus our-focus our-focus' 'our-awesomes our-awesomes our-awesomes our-awesomes our-awesomes our-awesomes' 'portfolio portfolio portfolio portfolio portfolio portfolio' 'our-team our-team our-team our-team our-team our-team' 'stats stats stats stats stats stats' 'work-steps work-steps work-steps work-steps work-steps work-steps' 'pricing pricing pricing pricing pricing pricing' 'testimonials testimonials testimonials testimonials testimonials testimonials' 'select-us select-us select-us select-us select-us select-us' 'our-blog our-blog our-blog our-blog our-blog our-blog' 'subscribe subscribe subscribe subscribe subscribe subscribe' 'contact contact contact contact contact contact'; }
+  grid-template-areas: 'home home home home home home' 'about-us about-us about-us about-us about-us about-us' 'our-focus our-focus our-focus our-focus our-focus our-focus' 'our-awesomes our-awesomes our-awesomes our-awesomes our-awesomes our-awesomes' 'portfolio portfolio portfolio portfolio portfolio portfolio' 'our-team our-team our-team our-team our-team our-team' 'stats stats stats stats stats stats' 'work-steps work-steps work-steps work-steps work-steps work-steps' 'pricing pricing pricing pricing pricing pricing' 'testimonials testimonials testimonials testimonials testimonials testimonials' 'select-us select-us select-us select-us select-us select-us' 'our-blog our-blog our-blog our-blog our-blog our-blog' 'subscribe subscribe subscribe subscribe subscribe subscribe' 'contact contact contact contact contact contact'; }
   main .home {
     grid-area: home;
     background-color: #444444;
-    background: url("../img/home/home-bc.jpg");
+    background: no-repeat url("../img/home/home-bc.jpg");
     padding: 100px 15%;
-    max-height: 600px; }
+    max-height: 800px; }
     main .home h2 {
       width: 80%;
       margin: 100px auto 50px;
@@ -122,36 +122,36 @@ main {
           color: #b27cf5; }
         main .home .about-icons .icons:last-child {
           color: #feb960; }
-  main .about-us-img {
-    grid-area: about-us-img;
-    box-sizing: border-box;
-    margin: 150px 0; }
-    main .about-us-img .about-us-img-area {
-      background: url("../img/about-us/about-us-bc.png");
-      float: right;
+  main .about-us {
+    grid-area: about-us;
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    main .about-us .about-us-img {
+      box-sizing: border-box;
       height: 700px;
       width: 555px;
+      background: url("../img/about-us/about-us-bc.png");
       border: 8px solid #b18d8d; }
-  main .about-us-comment {
-    grid-area: about-us-comment;
-    position: relative;
-    left: -75px;
-    margin-top: 150px;
-    padding: 75px 0;
-    width: 555px;
-    height: 440px; }
-    main .about-us-comment .comment {
-      background-color: #fff;
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
-      border-top: 1px solid #dedede;
-      border-left: 1px solid #dedede;
-      border-right: 1px solid #dedede;
-      padding: 0 50px;
-      height: 450px; }
-      main .about-us-comment .comment h2 {
-        font-size: 3rem; }
-      main .about-us-comment .comment p {
-        font-size: 0.9rem; }
+    main .about-us .about-us-comment {
+      position: relative;
+      left: -75px;
+      width: 555px;
+      height: 440px; }
+      main .about-us .about-us-comment .comment {
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+        border-top: 1px solid #dedede;
+        border-left: 1px solid #dedede;
+        border-right: 1px solid #dedede;
+        padding: 0 50px;
+        height: 450px; }
+        main .about-us .about-us-comment .comment h2 {
+          font-size: 3rem; }
+        main .about-us .about-us-comment .comment p {
+          font-size: 0.9rem; }
   main .our-focus {
     grid-area: our-focus;
     text-align: center;
@@ -189,14 +189,14 @@ main {
     grid-area: our-awesomes;
     background: url("../img/our-awesomes/our-awesomes-bc.jpg"); }
     main .our-awesomes .video {
-      width: 1000px;
+      width: 700px;
       margin: 0 auto; }
       main .our-awesomes .video .click-for-video {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         box-sizing: border-box;
-        width: 1000px;
+        width: 700px;
         height: 500px;
         padding: 50px;
         color: #fff;
@@ -210,7 +210,7 @@ main {
         height: 500px; }
         main .our-awesomes .video .youtube iframe {
           margin: 0 auto;
-          width: 1000px; }
+          width: 700px; }
       main .our-awesomes .video div.youtube {
         display: none; }
   main .portfolio {
@@ -453,7 +453,7 @@ main {
     grid-area: pricing;
     text-align: center;
     background-color: #f7f7f7;
-    padding: 100px 10%; }
+    padding: 100px 15%; }
     main .pricing .pricing-table-block {
       display: flex;
       flex-wrap: wrap;
@@ -463,11 +463,11 @@ main {
       main .pricing .pricing-table-block .pricing-table-item {
         background-color: #fff;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
-        width: 360px;
-        height: 570px;
-        padding: 15px;
+        width: 330px;
+        padding: 40px 0;
         margin: 20px 0; }
         main .pricing .pricing-table-block .pricing-table-item h3 {
+          margin-top: 0;
           font-size: 1.2rem; }
         main .pricing .pricing-table-block .pricing-table-item p {
           font-size: 1rem; }
@@ -511,26 +511,7 @@ main {
       color: #fff; }
     main .testimonials .slider {
       margin: 100px auto;
-      height: 450px;
       max-width: 1300px; }
-      main .testimonials .slider .slider-dots {
-        position: relative;
-        width: 200px;
-        top: 430px;
-        left: 950px; }
-        main .testimonials .slider .slider-dots .slider-dots-item {
-          cursor: pointer;
-          height: 12px;
-          width: 12px;
-          margin: 0 2px;
-          background-color: #ddd;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease; }
-          main .testimonials .slider .slider-dots .slider-dots-item:hover {
-            background-color: #fc5f45; }
-        main .testimonials .slider .slider-dots .active {
-          background-color: #fc5f45; }
       main .testimonials .slider .slider-item {
         display: flex;
         justify-content: center;
@@ -571,6 +552,23 @@ main {
               color: #fc5f45; }
           main .testimonials .slider .slider-item .slider-item-comment span img {
             width: 100px; }
+      main .testimonials .slider .slider-dots {
+        float: right;
+        margin-right: 100px;
+        width: 200px; }
+        main .testimonials .slider .slider-dots .slider-dots-item {
+          cursor: pointer;
+          height: 12px;
+          width: 12px;
+          margin: 0 2px;
+          background-color: #ddd;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease; }
+          main .testimonials .slider .slider-dots .slider-dots-item:hover {
+            background-color: #fc5f45; }
+        main .testimonials .slider .slider-dots .active {
+          background-color: #fc5f45; }
   main .select-us {
     grid-area: select-us;
     padding: 100px 15%;
@@ -614,17 +612,16 @@ main {
       align-items: center;
       margin: 150px 0; }
       main .our-blog .our-blog-item-block .our-blog-item-main {
+        background-color: #fff;
+        border-bottom: 3px solid #fc5f45;
         font-size: 0;
         width: 555px;
         height: 700px;
-        margin-bottom: 15px; }
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05); }
         main .our-blog .our-blog-item-block .our-blog-item-main img {
           width: 100%; }
         main .our-blog .our-blog-item-block .our-blog-item-main .our-blog-item-main-text {
-          padding: 30px;
-          background-color: #fff;
-          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
-          border-bottom: 3px solid #fc5f45; }
+          padding: 30px; }
           main .our-blog .our-blog-item-block .our-blog-item-main .our-blog-item-main-text h3 {
             text-align: left;
             font-size: 1.1rem; }
@@ -788,5 +785,338 @@ main {
           border-bottom: 3px solid #feb960; }
           main .contact footer .footer-contacts:nth-child(4) h3 {
             color: #feb960; }
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  header nav {
+    font-size: 0.8rem; }
+  main .home {
+    padding: 50px 5%; }
+    main .home h2 {
+      width: 100%;
+      margin-top: 50px; }
+  main .about-us .about-us-comment {
+    margin-top: 20px;
+    left: 0px; }
+  main .our-focus {
+    padding: 50px 5%; }
+  main .our-awesomes {
+    grid-area: our-awesomes;
+    background: url("../img/our-awesomes/our-awesomes-bc.jpg"); }
+    main .our-awesomes .video {
+      width: 700px;
+      margin: 0 auto; }
+      main .our-awesomes .video .click-for-video {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        width: 700px;
+        height: 500px;
+        padding: 50px;
+        color: #fff;
+        text-align: center; }
+        main .our-awesomes .video .click-for-video h2 {
+          font-size: 2rem; }
+        main .our-awesomes .video .click-for-video span img {
+          cursor: pointer; }
+      main .our-awesomes .video .youtube {
+        width: 600px;
+        height: 500px; }
+        main .our-awesomes .video .youtube iframe {
+          margin: 0 auto;
+          width: 700px; }
+      main .our-awesomes .video div.youtube {
+        display: none; }
+  main .portfolio {
+    padding: 50px 5%; }
+  main .our-team {
+    grid-area: our-team;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 50px 5%; }
+    main .our-team .our-team-block {
+      margin: 150px auto; }
+      main .our-team .our-team-block .our-team-photo-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center; }
+        main .our-team .our-team-block .our-team-photo-block .our-team-workers {
+          background-color: #fff;
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+          padding: 5px;
+          margin: 20px 0;
+          border: 0.1px solid #dedede; }
+          main .our-team .our-team-block .our-team-photo-block .our-team-workers figure {
+            margin: 0; }
+            main .our-team .our-team-block .our-team-photo-block .our-team-workers figure img {
+              width: 240px; }
+            main .our-team .our-team-block .our-team-photo-block .our-team-workers figure p {
+              font-size: 0.8rem; }
+      main .our-team .our-team-block .our-team-worker-comment {
+        padding: 70px; }
+        main .our-team .our-team-block .our-team-worker-comment p {
+          font-size: 1rem; }
+        main .our-team .our-team-block .our-team-worker-comment:before {
+          display: none; }
+        main .our-team .our-team-block .our-team-worker-comment .links-networks span a {
+          font-size: 0.7rem; }
+  main .work-steps {
+    padding: 50px 5%; }
+    main .work-steps .work-steps-collage .work-steps-collage-item img {
+      width: 550px;
+      height: 300px;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05); }
+    main .work-steps .work-steps-collage .work-steps-collage-item .work-steps-collage-comment {
+      position: static;
+      margin: 40px auto; }
+  main .pricing {
+    padding: 50px 5%; }
+  main .select-us {
+    padding: 50px 5%; }
+  main .testimonials {
+    padding: 50px 5%; }
+    main .testimonials h2 {
+      margin-bottom: 0; }
+    main .testimonials .slider .slider-dots {
+      float: none;
+      margin: 20px auto; }
+  main .our-blog .our-blog-item-block .our-blog-item-main {
+    margin-bottom: 15px; }
+  main .contact footer {
+    display: none; }
+  .our-blog {
+    padding: 50px 5%; }
+    .our-blog h2 {
+      margin: 0; }
+  .subscribe {
+    padding: 50px 5%; }
+  .contact {
+    padding: 50px 5%; }
+    .contact h2 {
+      margin: 0; } }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  header {
+    height: 150px;
+    display: flex;
+    position: static;
+    width: 100%; }
+    header .header-block h1 {
+      margin: 50px 0;
+      text-align: center;
+      width: 100%; }
+      header .header-block h1 a img {
+        width: 150px; }
+    header .header-block nav {
+      display: none; }
+  main .home {
+    padding: 50px 5%; }
+    main .home h2 {
+      font-size: 2rem;
+      width: 100%;
+      margin-top: 50px; }
+    main .home .about-icons .icons p {
+      font-size: 0.7rem; }
+  main .about-us {
+    padding: 100px 10%; }
+    main .about-us .about-us-img {
+      width: 300px;
+      height: 350px; }
+    main .about-us .about-us-comment {
+      max-width: 350px;
+      width: 100%;
+      height: initial;
+      margin-top: 20px;
+      left: 0px; }
+      main .about-us .about-us-comment .comment {
+        height: initial;
+        padding: 25px; }
+        main .about-us .about-us-comment .comment h2 {
+          text-align: center;
+          margin: 0;
+          font-size: 2.2rem; }
+        main .about-us .about-us-comment .comment p {
+          font-size: 0.6rem; }
+  main .our-focus {
+    padding: 50px 5%; }
+    main .our-focus h2 {
+      font-size: 2.2rem; }
+    main .our-focus p {
+      font-size: 0.9rem; }
+    main .our-focus .focus-item-list .focus-item {
+      height: initial;
+      padding: 50px 10px; }
+      main .our-focus .focus-item-list .focus-item p {
+        font-size: 0.7rem; }
+  main .our-awesomes {
+    display: none; }
+  main .portfolio {
+    padding: 50px 5%; }
+    main .portfolio h2 {
+      font-size: 2.2rem; }
+    main .portfolio p {
+      font-size: 0.9rem; }
+    main .portfolio .portfolio-img-block-area .portfolio-img-block {
+      width: 260px;
+      height: 200px; }
+  main .our-team {
+    grid-area: our-team;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 50px 5%; }
+    main .our-team h2 {
+      font-size: 2.2rem; }
+    main .our-team p {
+      font-size: 0.9rem; }
+    main .our-team .our-team-block {
+      margin: 150px auto; }
+      main .our-team .our-team-block .our-team-photo-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center; }
+        main .our-team .our-team-block .our-team-photo-block .our-team-workers {
+          background-color: #fff;
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+          padding: 5px;
+          margin: 20px 0;
+          border: 0.1px solid #dedede; }
+          main .our-team .our-team-block .our-team-photo-block .our-team-workers figure {
+            margin: 0; }
+            main .our-team .our-team-block .our-team-photo-block .our-team-workers figure img {
+              width: 240px; }
+            main .our-team .our-team-block .our-team-photo-block .our-team-workers figure p {
+              font-size: 0.8rem; }
+      main .our-team .our-team-block .our-team-worker-comment {
+        display: none; }
+  main .stats {
+    height: 300px;
+    padding: 0; }
+    main .stats .stats-block .stats-block-component span:nth-child(1) img {
+      height: 30px;
+      width: 30px; }
+    main .stats .stats-block .stats-block-component p {
+      font-size: 0.8rem; }
+  main .work-steps {
+    padding: 50px 5%; }
+    main .work-steps h2 {
+      font-size: 2.2rem; }
+    main .work-steps p {
+      font-size: 0.9rem; }
+    main .work-steps .work-steps-collage .work-steps-collage-item img {
+      width: 290px;
+      height: 180px;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05); }
+    main .work-steps .work-steps-collage .work-steps-collage-item .work-steps-collage-comment {
+      height: 250px;
+      max-width: 400px;
+      width: 100%;
+      position: static;
+      margin: 20px auto; }
+      main .work-steps .work-steps-collage .work-steps-collage-item .work-steps-collage-comment .comment-text h3 {
+        font-size: 1.4rem; }
+      main .work-steps .work-steps-collage .work-steps-collage-item .work-steps-collage-comment .comment-text p {
+        font-size: 0.8rem; }
+  main .pricing {
+    padding: 50px 5%; }
+    main .pricing h2 {
+      font-size: 2.2rem; }
+    main .pricing p {
+      font-size: 0.9rem; }
+    main .pricing .pricing-table-block .pricing-table-item p {
+      font-size: 0.8rem; }
+  main .testimonials {
+    padding: 50px 5%; }
+    main .testimonials h2 {
+      font-size: 2.2rem;
+      margin: 0; }
+    main .testimonials p {
+      font-size: 0.9rem; }
+    main .testimonials .slider .slider-item .slider-item-img img {
+      width: 280px;
+      height: 300px; }
+    main .testimonials .slider .slider-item .slider-item-comment {
+      padding: 10px; }
+      main .testimonials .slider .slider-item .slider-item-comment p {
+        font-size: 0.7rem; }
+    main .testimonials .slider .slider-dots {
+      float: none;
+      margin: 20px auto; }
+  main .select-us {
+    padding: 50px 5%; }
+    main .select-us h2 {
+      font-size: 2.2rem;
+      margin: 0; }
+    main .select-us p {
+      font-size: 0.9rem; }
+    main .select-us .select-us-item-block .select-us-item {
+      height: 300px; }
+      main .select-us .select-us-item-block .select-us-item img {
+        float: none; }
+      main .select-us .select-us-item-block .select-us-item .select-us-item-header {
+        margin: 0; }
+        main .select-us .select-us-item-block .select-us-item .select-us-item-header h3 {
+          text-align: center; }
+      main .select-us .select-us-item-block .select-us-item p {
+        text-align: center;
+        margin: 0; }
+    main .select-us h3 {
+      font-size: 1.2rem; }
+      main .select-us h3 .pr-button {
+        margin: 20px 0 0 0; }
+  main .our-blog {
+    padding: 50px 5%;
+    height: 1750px; }
+    main .our-blog h2 {
+      font-size: 2.2rem;
+      margin: 0; }
+    main .our-blog p {
+      font-size: 0.9rem; }
+    main .our-blog .our-blog-item-block {
+      margin: 50px 0; }
+      main .our-blog .our-blog-item-block .our-blog-item-main {
+        margin-bottom: 15px;
+        height: initial; }
+      main .our-blog .our-blog-item-block .our-blog-item-secondary .secondary-item {
+        margin-top: 15px; }
+  main .subscribe {
+    height: 300px; }
+    main .subscribe h3 {
+      font-size: 1.8rem;
+      margin: 0; }
+    main .subscribe p {
+      font-size: 0.9rem; }
+    main .subscribe form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0; }
+      main .subscribe form .subscribe-input {
+        border-radius: 20px;
+        padding-left: 0;
+        text-align: center; }
+      main .subscribe form .pr-button {
+        margin-top: 20px;
+        border-radius: 20px; }
+  main .contact {
+    padding: 50px 5%; }
+    main .contact h2 {
+      font-size: 1.8rem;
+      margin: 0; }
+    main .contact p {
+      font-size: 0.9rem; }
+    main .contact .contact-form {
+      width: 320px; }
+      main .contact .contact-form .contact-form-input-block {
+        height: initial; }
+        main .contact .contact-form .contact-form-input-block .contact-form-input {
+          width: 100%;
+          margin: 10px; }
+      main .contact .contact-form textarea {
+        margin: 10px; }
+    main .contact footer {
+      display: none; } }
 
 /*# sourceMappingURL=main.css.map */

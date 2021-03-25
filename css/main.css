@@ -958,6 +958,7 @@ main {
     main .portfolio p {
       font-size: 0.9rem; }
     main .portfolio .portfolio-img-block-area .portfolio-img-block {
+      margin-top: 50px;
       width: 260px;
       height: 200px; }
   main .our-team {
@@ -1009,11 +1010,13 @@ main {
       height: 180px;
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05); }
     main .work-steps .work-steps-collage .work-steps-collage-item .work-steps-collage-comment {
-      height: 250px;
+      box-sizing: border-box;
+      height: 280px;
       max-width: 400px;
       width: 100%;
       position: static;
-      margin: 20px auto; }
+      margin: 20px auto;
+      padding: 10px; }
       main .work-steps .work-steps-collage .work-steps-collage-item .work-steps-collage-comment .comment-text h3 {
         font-size: 1.4rem; }
       main .work-steps .work-steps-collage .work-steps-collage-item .work-steps-collage-comment .comment-text p {

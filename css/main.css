@@ -49,45 +49,31 @@ p {
       border-bottom: 3px solid #feb960; }
 
 body {
-  margin: 0 auto;
   font-family: "Poppins"; }
 
 header {
   width: 100%;
   position: fixed;
   z-index: 9999;
-  top: 0px;
-  left: 0px; }
+  top: 0px; }
   header .header-block {
-    max-width: 1920px;
-    max-height: 75px;
-    margin: 0 auto;
-    padding: 0 5% 0 5%;
     background-color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap; }
     header .header-block h1 {
-      margin-left: 5%; }
-    header .header-block nav {
-      width: 70%; }
-      header .header-block nav ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 0;
-        margin: 0; }
-        header .header-block nav ul li {
-          padding-left: 10px;
-          height: 25px; }
-          header .header-block nav ul li a {
-            text-decoration: none;
-            color: #000; }
+      margin: 0;
+      padding: 0 50px; }
+    header .header-block nav ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0; }
+      header .header-block nav ul li {
+        padding-left: 20px; }
 
 main {
-  padding-top: 75px; }
+  padding-top: 50px; }
   main .home {
     background-color: #444444;
     background: no-repeat url("../img/home/home-bc.jpg");
@@ -896,27 +882,24 @@ main {
 @media screen and (min-width: 320px) and (max-width: 768px) {
   header {
     display: flex;
-    position: static;
-    width: 100%; }
-    header .header-block {
-      max-height: 1000px; }
-      header .header-block h1 {
-        margin: 50px 0;
-        text-align: center;
-        width: 100%;
-        margin-left: 0; }
-        header .header-block h1 a img {
-          width: 150px; }
-      header .header-block nav {
-        margin: 0 auto;
-        text-align: center; }
-        header .header-block nav ul {
-          display: flex;
-          flex-direction: column; }
-          header .header-block nav ul li {
-            padding: 30px 0; }
-            header .header-block nav ul li a {
-              font-size: 2rem; }
+    position: static; }
+    header .header-block h1 {
+      padding: 50px 0;
+      text-align: center;
+      width: 100%;
+      margin-left: 0; }
+      header .header-block h1 a img {
+        width: 150px; }
+    header .header-block nav {
+      margin: 0 auto;
+      text-align: center; }
+      header .header-block nav ul {
+        display: flex;
+        flex-direction: column; }
+        header .header-block nav ul li {
+          padding: 30px 0; }
+          header .header-block nav ul li a {
+            font-size: 2rem; }
   main .home {
     padding: 50px 5%; }
     main .home h2 {
